@@ -1,0 +1,54 @@
+clear
+	R='\033[1;31m'
+        G='\033[1;32m'
+        Y='\033[1;33m'                                                          B='\033[1;34m'
+        M='\033[1;35m'
+        C='\033[1;36m'                                                          W='\033[0m'
+	echo
+	echo
+	echo -e "$Y       Hackeando desde termux"
+	echo -e "          somos uno somos todos"
+	echo -e "$C       ____  ____   _    ____  _____"
+	echo -e "      / ___||  _ \ / \  |  _ \| ____|"
+	echo -e "      \___ \| |_) / _ \ | | | |  _|"
+	echo -e "       ___) |  __/ ___ \| |_| | |___"
+	echo -e "      |____/|_| /_/   \_\____/|_____| v .0.4.0"
+	echo -e "$Y       Cesar Hacker The Gray && Mickey"
+	sleep 7
+	echo
+	echo
+printf "$Y checando metasploit"
+echo
+sleep 6
+cd $HOME/metasploit-framework
+cd $HOME
+
+printf "$Y Descargando archivos"
+
+pkg update && pkg upgrade -y
+pkg install wget git apksigner unzip python2 -y
+
+rm -rf $HOME/spade
+rm -rf $HOME/apktool
+
+cd $HOME
+
+git clone https://github.com/hax4us/apktool
+printf "$C extrayendo"
+sleep 5
+
+printf "$C Descargando spade"
+echo
+cd $HOME
+sleep 7
+git clone https://github.com/Cesar-Hacker/spade
+unzip $HOME/spade/core.zip;ls
+cp -r $HOME/core $HOME/spade
+rm -rf $HOME/spade/core.zip
+rm -rf $HOME/core
+rm $HOME/spade/core/apkd.py2
+chmod 777 $HOME/spade/Cesar
+bash $HOME/spade/Cesar
+rm $HOME/spade/Cesar
+rm $HOME/Spade_in_Termux
+
