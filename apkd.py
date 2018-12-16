@@ -104,7 +104,7 @@ def rebuild(mainapk):
 	print pyc.Info("Firmando Payload att.. Cesar...")
         print pyc.Info("")
 	path = "%s/dist/%s"%(mainapkname,mainapk)
-	signapk = "./signapk publickey.x509.pem publickey.pk8 %s $HOME/spade/CesarHack/%s-final.apk"%(path,mainapk[:-4])
+	signapk = "apksigner -p Cesar keystore %s $HOME/spade/CesarHack/%s-final.apk"%(path,mainapk[:-4])
 	os.system(signapk) 
         os.system("rm -rf temp.apk temp keystore %s %s"%(mainapk.split('.')[0],mainapk))
         print pyc.Succ("")
