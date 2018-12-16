@@ -49,6 +49,4 @@ rm -rf $HOME/core
 rm $HOME/spade/core/apkd.py2
 chmod 777 $HOME/spade/Cesar
 bash $HOME/spade/Cesar
-rm $HOME/spade/Cesar
-rm $HOME/Spade_in_Termux
 
